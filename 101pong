@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+
+import math
+import sys
+import numpy as np
+
+if len(sys.argv) != 8:
+        sys.exit (84)
+else:
+    test = np.array([])
+    x0 = float(sys.argv[1])
+    y0 = float(sys.argv[2])
+    z0 = float(sys.argv[3])
+    x1 = float(sys.argv[4])
+    y1 = float(sys.argv[5])
+    z1 = float(sys.argv[6])
+    n = int(sys.argv[7])
+    x = x1-x0
+    y = y1-y0
+    z = z1-z0
+
+    print("The velocity vector of the ball is:\n(%.2f, %.2f, %.2f)" %(x, y ,z))
+    xn = x1+(x*n)
+    yn = y1+(y*n)
+    zn = z1+(z*n)
+    print("At time t + ", n, ", ball coordinates will be:\n(%.2f, %.2f, %.2f)" %(xn, yn, zn), sep='')
+    if z0>z1:
+        angle = 90-(np.arccos(z1/(math.sqrt(((x**2)+(y**2)+(z**2))))))
+        formatted_angle = "{:.2f}".format(angle)
+        print("The incidence angle is:\n", formatted_angle, "degrees", sep='')
+    else:
+        print("The ball won't reach the paddle")
+    sys.exit (0)

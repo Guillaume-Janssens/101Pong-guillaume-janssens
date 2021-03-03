@@ -1,0 +1,66 @@
+#!/usr/bin/python3
+
+import math
+import sys
+import numpy as np
+
+value = input("Please enter an integer for x-1:\n")
+x0 = int(value)
+value = input("Please enter an integer for y-1:\n")
+y0 = int(value)
+value = input("Please enter an integer for z-1:\n")
+z0 = int(value)
+value = input("Please enter an integer for x0:\n")
+x1 = int(value)
+value = input("Please enter an integer for y0:\n")
+y1 = int(value)
+value = input("Please enter an integer for z0:\n")
+z1 = int(value)
+xa = x0-x1
+ya = y0-y1
+za = z0-z1
+s = math.sqrt((xa*xa)+(ya*ya)+(za*za))
+print("the speed of the ball is:", s, "m/s") 
+print("the ball travels at the speed of")
+s = s / 2.237
+if s <= 1:
+    print("slug")
+elif s >= 1 and s < 8:
+    print("mouse")
+elif s >= 8 and s < 12:
+    print("squirel")
+elif s >= 12 and s < 25:
+    print("elephant")
+elif s >= 25 and s < 27:
+    print("Usain Bolt")
+elif s >= 27 and s < 30:
+    print("domestic cat")
+elif s >= 30 and s < 43:
+    print("greyhound")
+elif s >= 43 and s < 55:
+    print("African Lion")
+elif s >= 55 and s < 61:
+    print("Pronghorn Antelope")
+elif s >= 61 and s < 70:
+    print("UK cars on highway")
+elif s >= 70 and s < 72:
+    print("cheetah")
+elif s >= 72 and s < 217:
+    print("falcon dive")
+elif s >= 217 and s < 600:
+    print("commercial flight")
+elif s >= 600 and s < 1450:
+    print("Concorde, warning!! Crash may occur")
+elif s >= 1450 and s < 2194:
+    print("SR71 Blackbird")
+elif s >= 2194 and s < 7546:
+    print("NASA X-43A")
+elif s >= 7546 and s < 17320:
+    print("Space shuttle")
+elif s >= 17320 and s < 24790:
+    print("APOLLO10")
+elif s > 600000000000:
+    print("light")
+else:
+    print("nothing to compare")
+sys.exit (0)
